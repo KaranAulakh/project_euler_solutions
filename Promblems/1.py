@@ -7,11 +7,17 @@ The sum of these multiples is 23.
 Find the sum of all the multiples of 3 or 5 below 1000.
 """
 
-def problem1():
+def problem1_brute_force():
     """
     Brute Force Solution
     we can solve this procedurally by simple brute force. We need to iterate through all numbers
     below 1000 and check if they are multiples of 3 or 5. If they are, we add them to a sum.
+
+    You can also make a solution of this style more efficient by only including multiples of 3 or 5 
+    in the for loop. For example, build a for loop with step 3, sum all numbers. Build a for loop with
+    step 5, then if the curent number is also a factor of 3, we can skip as we don't want to double count
+    15, 30..
+    """
 
     sum = 0
     for i in range(1, 1000):
@@ -20,7 +26,9 @@ def problem1():
     return sum
 
 
-    Effiecient Mathematic Solution
+def problem1():
+    """
+    Effiecient Solution
 
     We can solve this much quicker by using the method below to determine the sum of any k and m where k
     is the multiple and m is the number of times that multiple exists in our range. For example, with all 
