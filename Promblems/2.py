@@ -9,7 +9,7 @@ find the sum of the even-valued terms.
 """
 
 
-def problem2_brute_force():
+def brute_force_solution():
     """
     Brute force solution you can find all fibanacci numbers below 4,000,000 and add them to a running sum
     if they are even.
@@ -37,7 +37,7 @@ def next_fib(one, two):
     return one + two
 
 
-def problem2():
+def solution():
     """
         fibonacci sequences follow the pattern of odd, odd, even. So we can represent this as a simpler series
         with 1/3 the number of terms as such ∑(n) = 4 * ∑(n-1) + ∑(n-2) 
@@ -60,4 +60,4 @@ def next_even_fib(last, last_last):
     return (4 * last) + last_last
 
 
-print(problem2())
+print(solution())

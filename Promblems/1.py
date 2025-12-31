@@ -14,8 +14,8 @@ def problem1_brute_force():
     below 1000 and check if they are multiples of 3 or 5. If they are, we add them to a sum.
 
     You can also make a solution of this style more efficient by only including multiples of 3 or 5 
-    in the for loop. For example, build a for loop with step 3, sum all numbers. Build a for loop with
-    step 5, then if the curent number is also a factor of 3, we can skip as we don't want to double count
+    in the for loop. For example, build a for loop with a step of 3, sum all numbers. Build a for loop with
+    a step of 5, then if the curent number is also a factor of 3, we can skip as we don't want to double count
     15, 30..
     """
 
@@ -26,15 +26,15 @@ def problem1_brute_force():
     return sum
 
 
-def problem1():
+def solution():
     """
-    Effiecient Solution
+    Efficient Solution
 
     We can solve this much quicker by using the method below to determine the sum of any k and m where k
     is the multiple and m is the number of times that multiple exists in our range. For example, with all 
     multiples of 3 below 10: k is 3 and m is also 3, since only 3 multiples exist in that range (3, 6, 9).
 
-    Using this method we can find all multiples of 3, add all multiples of 5, and subtract all multiples of
+    Using this method we can add all multiples of 3, add all multiples of 5, and subtract all multiples of
     15 as those are counted twice. 
     """
 
@@ -43,7 +43,7 @@ def problem1():
 
 def sum_k_of_m(k, m):
     """
-    Uses Gauss's formula to sum the first m multiples of k -> k * ((m * (m + 1)) / 2)
+    Use Gauss's formula to sum all values of m -> Gauss's formula: ((m * (m + 1)) / 2)
     Intution: For example, for multiples of 3 under 10, k = 3 and m = 3. We can think of this as such
 
     3 + 6 + 9 = 18 can also be seen as 3 * (1 + 2 + 3)
@@ -55,4 +55,4 @@ def sum_k_of_m(k, m):
 
 
 
-print(problem1())
+print(solution())
